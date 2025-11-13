@@ -21,6 +21,7 @@ pipeline {
             steps {
                 echo 'Installing dependencies...'
                 sh '''
+                    export PATH="$HOME/.local/bin:$PATH"
                     cd app
                     uv add -r requirements.txt
                     echo "Build completed successfully"
